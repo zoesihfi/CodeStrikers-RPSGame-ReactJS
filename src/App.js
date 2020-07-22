@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
+import Amplify from "aws-amplify";
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
