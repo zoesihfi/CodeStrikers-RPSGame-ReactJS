@@ -1,49 +1,35 @@
+//React Imports 
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
+//Bootstrap Imports 
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
 
-
+//Button Imports
 import GetStartedButton from '../ButtonsContainer/GetStartedButton.js';
 import PaypalButton from '../ButtonsContainer/PaypalButton.js';
 import UserHomeButton from '../ButtonsContainer/UserHomeButton.js';
 
-
-
+//Image Imports
 import rps from '../../assets/images/rps-logo.png';
 
+// AWS Imports
+import Amplify, { Auth } from 'aws-amplify';
+import awsmobile from '../../aws-exports.js';
+import { AmplifyAuthenticator, AmplifySignIn, AmplifySignOut } from '@aws-amplify/ui-react';
+
+//Components Imports
+import SecondBottomNavBar from '../NavbarContainer/SecondBottomNavBar.js';
 
 export default class WelcomeScreen extends Component {
     render() {
         return (
             <div>
-                 <Image src={rps} className="main"  alt="main logo" /> 
-                 <Row><h4 className='wel-title'>Log In </h4></Row>
-                 <form >
-            <div className="form-group">
-                
-                    <input type="text" className="form-cntrl" placeholder="Enter username" />
-                </div>
-
-                <div className="form-group">
-                  
-                    <input type="password" className="form-cntrl" placeholder="Enter password" />
-                </div>
-
-                <div className="form-group">
-                    <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                    </div>
-                </div>
-
-                <UserHomeButton  />
-                <p className="pw">Forgot <Link className="link"to="/forgotpw"> Password</Link>?</p>
-                <p className="sign">Sign Up <Link className="link" to="sign-up">Here</Link>!</p>
-            </form>
-
-                 <Row className="copyright"><i class="far fa-copyright"> <span className="copyright-code">Code Differently</span></i></Row>
+                <Row className="new-nav"><SecondBottomNavBar /></Row>
+                <Row><Image src={rps} className="main"  alt="main logo" /></Row>
+                <Row><AmplifySignIn headerText="Login" slot="sign-in" /></Row>
+                <Row className="copyright"><i class="far fa-copyright"> <span className="copyright-code">Code Differently</span></i></Row>
             </div>
         );
     }
