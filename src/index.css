@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
 
+:root {
+    --amplify-primary-color: #008000;
+
+    --amplify-primary-color: #0000FF;
+    
+    --amplify-primary-color: #008000;
+}
 
 * {
   box-sizing: border-box; 

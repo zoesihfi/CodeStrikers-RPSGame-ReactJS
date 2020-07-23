@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-codestrikersrpsgamer-dev-164127-authRole",
+            "UnauthRoleArn": "arn:aws:iam::298318163529:role/amplify-codestrikersrpsgamer-dev-164127-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::298318163529:role/amplify-codestrikersrpsgamer-dev-164127-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-codestrikersrpsgamer-dev-164127-deployment",
+            "UnauthRoleName": "amplify-codestrikersrpsgamer-dev-164127-unauthRole",
+            "StackName": "amplify-codestrikersrpsgamer-dev-164127",
+            "StackId": "arn:aws:cloudformation:us-east-2:298318163529:stack/amplify-codestrikersrpsgamer-dev-164127/5c480080-cd03-11ea-9f78-065ddb117676",
+            "AmplifyAppId": "d170z4gjr7gqgt"
+        },
+        "categories": {
+            "auth": {
+                "codestrikersrpsgamere24a602e": {}
+            }
+        }
+    }
+}

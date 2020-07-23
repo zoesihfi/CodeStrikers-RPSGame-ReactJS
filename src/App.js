@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
-import Amplify from "aws-amplify";
+
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -22,7 +22,13 @@ import SpanishInstructions from './components/InstructionContainer/SpanishInstru
 import SecondBottomNavBar from './components/NavbarContainer/SecondBottomNavBar.js';
 import SecondMainWelcome from './components/MainWelcomeContainer/SecondMainWelcome.js';
 
+import Amplify, {Auth} from 'aws-amplify';
 
+import awsmobile from './aws-exports.js';
+
+import { AmplifyAuthenticator,AmplifySignIn,AmplifySignOut} from '@aws-amplify/ui-react';
+
+Amplify.configure(awsmobile);
 
 
 function App() {
@@ -50,6 +56,7 @@ function App() {
         </Router>
             <Row className="new-nav"><SecondBottomNavBar /></Row>
             <hr className='line'></hr>
+            <AmplifySignIn headerText="My Custom Sign In Header" slot="sign-in" />
       </Container>
   );
 }
